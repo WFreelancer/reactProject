@@ -1,0 +1,32 @@
+.header {
+	padding: 10px 0;
+	background-color: rgb(63, 186, 112);
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	&__logo {
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 32px;
+	}
+}
+
+.menu {
+	display: flex;
+
+	li {
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+	}
+
+	a {
+		color: #fff;
+	}
+}
