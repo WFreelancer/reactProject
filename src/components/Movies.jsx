@@ -1,14 +1,18 @@
-import React, {Component} from "react";
 import {Movie} from "./Movie"
 
-class Movies extends Component{
-	render(){
-		return (
-			<div className='main-movie'>
-				<Movie/>
-			</div>
-		)
-	}
+function Movies(props){
+	const {movies = []} = props;
+	return (
+		<div className='main-movie'>
+			{
+				movies.length ? (
+					movies.map(movie => (<Movie key={movie.imdbID} {...movie}/> 
+					))
+				) : <h3>Loading...</h3>
+				
+			}
+		</div>
+	)
 }
 
 export {Movies};

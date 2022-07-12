@@ -1,7 +1,7 @@
 function Header(){
 	return(
 		<header className="header">
-			<div className="header__container">
+			<div className="header__container container">
 				<div className="header__logo">
 					LOGO {new Date().getFullYear()}
 				</div>

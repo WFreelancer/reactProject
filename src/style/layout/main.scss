@@ -1,7 +1,11 @@
 .block {
-	padding-top: 100px;
+	padding: 100px 0;
+	min-height: calc(100vh - (73px + 60px));
+}
+
+.container {
 	margin: 0 auto;
-	width: 800px;
+	max-width: 800px;
 }
 
 .subscribe {
@@ -29,4 +33,32 @@
 
 .main-movie {
 	margin-bottom: 200px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	gap: 1rem;
+}
+
+.movie-card {
+	border: 1px solid #000;
+
+	&__image {
+		margin-bottom: 10px;
+		min-height: 250px;
+		width: 100%;
+		position: relative;
+
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__body {
+		padding: 0 10px;
+		margin-bottom: 10px;
+	}
 }

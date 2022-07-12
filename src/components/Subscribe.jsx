@@ -32,16 +32,11 @@ class Subscribe extends Component{
 		}
 	}
 
-	componentDidMount() {
-		console.log(this.myRef);
-		this.myRef.current.focus();
-	}
-
 	render(){
 		const {email, checkbox} = this.state;
 		return(
 			<div className="subscribe">
-				<input type="text" name="email" value={email} onChange={this.inputAction} ref={this.myRef}/>
+				<input type="text" name="email" value={email} onChange={this.inputAction}/>
 				<label className="subscribe__label">
 					<input type="checkbox" name="checkbox" checked={checkbox} onChange={this.checkboxAction}/>Some text
 				</label>

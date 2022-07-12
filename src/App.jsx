@@ -1,37 +1,15 @@
 import React from "react";
-import {Posts} from './components/Posts';
-import {Form} from './components/Form'
-import {Subscribe} from './components/Subscribe'
-import {Movies} from './components/Movies'
 import {Header} from './layout/Header'
+import {Main} from './layout/Main'
+import {Footer} from './layout/Footer'
 
 class App extends React.Component{
-	constructor() {
-		super();
-		this.state = {
-			posts: [
-				{id: 'ab1', name: 'firstPost'},
-				{id: 'ab2', name: 'secondPost'},
-				{id: 'ab3', name: 'theerdPost'}
-			]
-		}
-	}
-	
-	deletePost = (id) => {
-		this.setState({posts: this.state.posts.filter(post => post.id !== id)});
-	}
-
 	render () {
-		const {posts} = this.state;
 		return (
 			<React.Fragment>
 				<Header/>
-				<div className="block">
-					<Movies/>
-					<Form />
-					<Posts posts={posts} deletePost={this.deletePost}/>
-					<Subscribe />
-				</div>
+				<Main />
+				<Footer/>
 			</React.Fragment>
 		);
 	}
